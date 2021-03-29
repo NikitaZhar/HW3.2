@@ -11,6 +11,7 @@
 		53A6E38F2612222F0013E3F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A6E38E2612222F0013E3F6 /* ContentView.swift */; };
 		53A6E391261222330013E3F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A6E390261222330013E3F6 /* Assets.xcassets */; };
 		53A6E394261222330013E3F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A6E393261222330013E3F6 /* Preview Assets.xcassets */; };
+		53A6E39D261225730013E3F6 /* ColoredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A6E39C261225720013E3F6 /* ColoredView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		53A6E390261222330013E3F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53A6E393261222330013E3F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		53A6E395261222330013E3F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53A6E39C261225720013E3F6 /* ColoredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				53A6E38C2612222F0013E3F6 /* ColorSlidersApp.swift */,
 				53A6E38E2612222F0013E3F6 /* ContentView.swift */,
+				53A6E39C261225720013E3F6 /* ColoredView.swift */,
 				53A6E390261222330013E3F6 /* Assets.xcassets */,
 				53A6E395261222330013E3F6 /* Info.plist */,
 				53A6E392261222330013E3F6 /* Preview Content */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A6E39D261225730013E3F6 /* ColoredView.swift in Sources */,
 				53A6E38F2612222F0013E3F6 /* ContentView.swift in Sources */,
 				53A6E38D2612222F0013E3F6 /* ColorSlidersApp.swift in Sources */,
 			);
