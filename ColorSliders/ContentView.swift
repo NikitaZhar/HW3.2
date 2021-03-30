@@ -24,45 +24,9 @@ struct ContentView: View {
                     blue: blueSliderValue / 255
                 ))
                 VStack {
-                    HStack {
-                        Text("\(lround(redSliderValue))")
-                            .foregroundColor(.white)
-                            .font(.system(size: 20))
-                            .frame(minWidth: 10, maxWidth: 40, minHeight: 20, maxHeight: 20)
-                        Slider(value: $redSliderValue, in: 0...255, step: 1)
-                            .accentColor(.red)
-                            .frame(height: 50)
-                        TextField("000", value: $redSliderValue, formatter: NumberFormatter())
-                            .font(.system(size: 20))
-                            .frame(width: 51, height: 35)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                    HStack {
-                        Text("\(lround(greenSliderValue))")
-                            .foregroundColor(.white)
-                            .font(.system(size: 20))
-                            .frame(minWidth: 10, maxWidth: 40, minHeight: 20, maxHeight: 20)
-                        Slider(value: $greenSliderValue, in: 0...255)
-                            .accentColor(.green)
-                            .frame(height: 50)
-                        TextField("000", value: $greenSliderValue, formatter: NumberFormatter())
-                            .font(.system(size: 20))
-                            .frame(width: 51, height: 35)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                    HStack {
-                        Text("\(lround(blueSliderValue))")
-                            .foregroundColor(.white)
-                            .font(.system(size: 20))
-                            .frame(minWidth: 10, maxWidth: 40, minHeight: 20, maxHeight: 20)
-                        Slider(value: $blueSliderValue, in: 0...255)
-                            .accentColor(.green)
-                            .frame(height: 50)
-                        TextField("000", value: $blueSliderValue, formatter: NumberFormatter())
-                            .font(.system(size: 20))
-                            .frame(width: 51, height: 35)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
+                    ColoredSlider(sliderValue: $redSliderValue, color: .red)
+                    ColoredSlider(sliderValue: $greenSliderValue, color: .green)
+                    ColoredSlider(sliderValue: $blueSliderValue, color: .blue)
                 }.padding()
                 Spacer()
             }
@@ -76,3 +40,24 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+struct ColoredSlider: View {
+    @Binding var sliderValue: Double
+    var color: Color
+    
+    var body: some View {
+        HStack {
+            Text("\(lround(sliderValue))")
+                .foregroundColor(.white)
+                .font(.system(size: 20))
+                .frame(minWidth: 10, maxWidth: 40, minHeight: 20, maxHeight: 20)
+            Slider(value: $sliderValue, in: 0...255, step: 1)
+                .accentColor(color)
+                .frame(height: 50)
+            TextField("000", value: $sliderValue, formatter: NumberFormatter())
+                .keyboardType(.decimalPad)
+                .font(.system(size: 20))
+                .frame(width: 51, height: 35)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+        }
+    }
+}
